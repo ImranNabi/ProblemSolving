@@ -11,6 +11,9 @@
 class Solution {
     public ListNode sortList(ListNode head) {
         PriorityQueue<Integer>st=new PriorityQueue<>();
+         if(head==null || head.next==null ){
+            return head;
+        }
         ListNode temp=head;
         while(temp!=null){
             st.add(temp.val);
